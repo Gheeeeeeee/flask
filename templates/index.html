@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Inspiration</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 Daily Inspiration 🌟</h1>
+        <p>Share your words of wisdom and inspire the world!</p>
+        <form method="POST">
+            <input type="text" id="text_field" name="text_field" placeholder="Enter your inspiration..." required>
+            <button type="submit">Inspire</button>
+        </form>
+        {% if result %}
+        <div class="result">
+            <h2>Your Inspiration:</h2>
+            <p>"{{ result }}"</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
